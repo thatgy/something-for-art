@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Frameset//EN" "http://www.w3.org/TR/PR-html40/frameset.dtd">
+   <html lang="en-US">
+     <head>
+       
+     
+       <TITLE>About me in HTML 4 90's style</TITLE>
+<h1>
+  yes 
+       </h1>
+       <style type="text/css">
+         
+         /*because I wanted to go a bit above and beyond for that extra 90's feel, I am using html version 3 or 4 rather than html 5- 
+  https://www.bu.edu/lernet/artemis/years/2020/projects/FinalPresentations/HTML/historyofhtml.html
+  based on the timeline here, the reason the doctype declaration is so unsusal is at the time, well, everything was a mess so before htm5 came and cleaned everything up, you needed a longer doctype for extra information so the browser (hopefully) knew what it was looking at(browser wars go burr)
+  credit here: https://www.w3schools.com/tags/tag_doctype.asp
+  for needing to reference how different doctypes worked
+      oh yeah, I found this for old css: http://1997.webhistory.org/www.lists/www-talk.1994q1/0648.html
+      https://css-tricks.com/look-back-history-css/
+         this handy-dany document: https://www.sitepoint.com/frames-frame-usage-explained/
+         - another thing of note is the abuse of frames, or more aptly framesets and frames, see CSS was not super duper popular at the time of the 90's; it actually had just taken off(in fact, my reason for using html 4 instead of the intended html 3.2 was CSS embedding is really, really janky, so I said 4.0, (being 1997--not to be confused with 4.01, in 1998 aka html 4 [dispite 4.0 being, well 4]) was the closest choice.), this means that in this time, while css was actually supported [and you could have classes and ids and all that jazz in HTML(a problem in 3.2)], you still had a lot less dependence on it. 
+        - what frames actually did seems quite simple at first: they replaced the <body> tag, with <frameset>. In the frameset tag, you would specify direcly the layout of the website with seperation of rows and colums and all that jazz, so for example <frameset cols= "25*, 25*, 50*"> give colums with relative amounts of pixals, or use % instead of * for % of screen, (If it sounds confusing and janky, that's because it is), then you would drop a <frame> tag with a src and a name pointing to another html file and what you would call the frame respectivly, in a sense it was a way to run different parts of the website in sepreate html files, sorta like compartmentalizing. It seems convienient, and almost resource effecent except: welcome to spagatti code, file addition 
+         - you may be wondering how I accomplished this in netnet, well, each html file created has a unique url which specifies everything in the code, so all I had to do was to make the HTML files as seprate links and dump them in(could I have used a project , yes, dang it I shouldve thought of that before writing it so I guess in true 90's fashon, we have a massive lengthy workoround created to solve a problem we let ourselves create in the first place)
+        
+         Now we actually will style the frames, and yes, the frames will contain dives to fufill the assignment
+*/
+         frame{
+           color: red;
+         }
+         #test{
+           background-color: blue;
+         }
+       </style>
+
+       ... other head elements
+     </head>
+     <frameset  cols="20%,50%,*">
+       
+       <!--if the comment in the style did not make it clear, this document will mainly be containing border styling, and any embedded text will come from some other file in the frame, aren't frames FUN-->
+       <frame src="https://copy.sh" id="test">
+       test1
+       <frame src=""> test 2 in 
+       
+       ... document body
+       <!--here is where things get almost interisting and somewhat fun, instead of making a third frame, you could make it a framset and have that mess be distributed in it's own way, I will do so here just for funsies...oh wanna know something cool and totally not eyeball ripping? We have to style frames using seprate style sheets for each frame-->
+       <frameset rows="*,*">
+         <frame src="" name="This is where the about me gets important">
+       
+       </frameset>
+     </frameset>
+</html>
